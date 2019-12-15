@@ -119,4 +119,5 @@ def beamSearch(model, encoded_image, max_length, word2idx, idx2word, start_seq_t
       tmp_finished_hypos, hypothesis = _filter_finished_hypos(hypothesis, word2idx, end_seq_token)
       finished_hypos += tmp_finished_hypos
   final_seq_indices = sorted(hypothesis+finished_hypos, key=lambda x: x[0])[0][1]
+  print("this is possibly not possible")
   return " ".join([idx2word[idx] for idx in final_seq_indices])
